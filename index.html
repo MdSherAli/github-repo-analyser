@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FitGuide - Your Fitness Companion</title>
+
+    <link rel="stylesheet" href="Fitness website.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+
+    <div class="logo">
+        <span>FIT</span>GUIDE
+    </div>
+
+    <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#planner">Fitness Planner</a>
+        <a href="#workouts">Workouts</a>
+        <a href="#nutrition">Nutrition</a>
+    </div>
+
+</nav>
+
+
+<!-- HERO SECTION -->
+<section id="home" class="hero">
+
+    <div class="hero-content">
+
+        <p class="small-title">YOUR FITNESS COMPANION</p>
+
+        <h1>
+            Build a healthier
+            <span>you.</span>
+        </h1>
+
+        <p class="hero-text">
+            Get a personalized fitness plan based on your goals,
+            activity level and experience.
+        </p>
+
+        <a href="#planner" class="primary-btn">
+            Create My Plan →
+        </a>
+
+    </div>
+
+    <div class="hero-card">
+
+        <div class="body-visual">
+            <div class="head"></div>
+            <div class="body"></div>
+            <div class="arm left"></div>
+            <div class="arm right"></div>
+            <div class="leg left-leg"></div>
+            <div class="leg right-leg"></div>
+        </div>
+
+        <div class="floating-card card-one">
+            💪 Strength
+        </div>
+
+        <div class="floating-card card-two">
+            🥗 Nutrition
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PLANNER -->
+<section id="planner" class="section">
+
+    <div class="section-heading">
+
+        <p class="small-title">FITNESS PLANNER</p>
+
+        <h2>
+            Tell us about yourself
+        </h2>
+
+        <p>
+            Enter your basic information and choose your fitness goal.
+        </p>
+
+    </div>
+
+
+    <div class="planner-container">
+
+        <form id="fitnessForm">
+
+            <div class="form-grid">
+
+                <div class="input-group">
+
+                    <label>Age</label>
+
+                    <input
+                        type="number"
+                        id="age"
+                        placeholder="Enter your age"
+                        min="13"
+                        max="100"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>Height (cm)</label>
+
+                    <input
+                        type="number"
+                        id="height"
+                        placeholder="Example: 170"
+                        min="100"
+                        max="250"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>Weight (kg)</label>
+
+                    <input
+                        type="number"
+                        id="weight"
+                        placeholder="Example: 65"
+                        min="25"
+                        max="300"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>Activity Level</label>
+
+                    <select id="activity" required>
+
+                        <option value="">
+                            Select activity level
+                        </option>
+
+                        <option value="beginner">
+                            Beginner
+                        </option>
+
+                        <option value="moderate">
+                            Moderately Active
+                        </option>
+
+                        <option value="active">
+                            Very Active
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <div class="goal-section">
+
+                <label class="goal-label">
+                    What is your fitness goal?
+                </label>
+
+                <div class="goal-grid">
+
+                    <div class="goal-card">
+
+                        <input
+                            type="radio"
+                            name="goal"
+                            value="healthy"
+                            required
+                        >
+
+                        <div>
+                            <span class="goal-icon">🏃</span>
+
+                            <h3>Healthy Physique</h3>
+
+                            <p>
+                                Build a balanced, healthy routine.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="goal-card">
+
+                        <input
+                            type="radio"
+                            name="goal"
+                            value="muscle"
+                        >
+
+                        <div>
+                            <span class="goal-icon">💪</span>
+
+                            <h3>Muscle Growth</h3>
+
+                            <p>
+                                Build strength with resistance training.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="goal-card">
+
+                        <input
+                            type="radio"
+                            name="goal"
+                            value="endurance"
+                        >
+
+                        <div>
+                            <span class="goal-icon">❤️</span>
+
+                            <h3>Endurance</h3>
+
+                            <p>
+                                Improve cardiovascular fitness.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="goal-card">
+
+                        <input
+                            type="radio"
+                            name="goal"
+                            value="weightLoss"
+                        >
+
+                        <div>
+                            <span class="goal-icon">🧘</span>
+
+                            <h3>Weight Loss</h3>
+
+                            <p>
+                                Burn calories with sustainable training.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <button type="submit" class="generate-btn">
+                Generate My Fitness Plan →
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+
+<!-- DASHBOARD -->
+<section id="dashboard" class="section dashboard-section hidden">
+
+    <div class="section-heading">
+
+        <p class="small-title">YOUR RESULTS</p>
+
+        <h2>Your Fitness Dashboard</h2>
+
+        <p>
+            Your workout and nutrition plan is tailored to your details and goal.
+        </p>
+
+    </div>
+
+
+    <div class="profile-summary">
+
+        <div class="summary-box">
+
+            <span>AGE</span>
+            <strong id="resultAge">--</strong>
+
+        </div>
+
+        <div class="summary-box">
+
+            <span>HEIGHT</span>
+            <strong id="resultHeight">--</strong>
+
+        </div>
+
+        <div class="summary-box">
+
+            <span>WEIGHT</span>
+            <strong id="resultWeight">--</strong>
+
+        </div>
+
+        <div class="summary-box">
+
+            <span>BODY TYPE</span>
+            <strong id="resultBodyType">--</strong>
+
+        </div>
+
+        <div class="summary-box">
+
+            <span>GOAL</span>
+            <strong id="resultGoal">--</strong>
+
+        </div>
+
+    </div>
+
+
+    <!-- WORKOUT -->
+    <div id="workouts" class="dashboard-card">
+
+        <div class="card-heading">
+
+            <div>
+                <p class="small-title">WORKOUT PLAN</p>
+                <h2>Weekly Workout</h2>
+            </div>
+
+            <span class="card-icon">🏋️</span>
+
+        </div>
+
+
+        <div id="workoutList" class="workout-list"></div>
+
+    </div>
+
+
+    <!-- EXERCISES -->
+    <div class="dashboard-card">
+
+        <div class="card-heading">
+
+            <div>
+                <p class="small-title">EXERCISE LIBRARY</p>
+                <h2>Recommended Exercises</h2>
+            </div>
+
+            <span class="card-icon">🔥</span>
+
+        </div>
+
+
+        <div id="exerciseGrid" class="exercise-grid"></div>
+
+    </div>
+
+
+    <!-- NUTRITION -->
+    <div id="nutrition" class="dashboard-card">
+
+        <div class="card-heading">
+
+            <div>
+                <p class="small-title">NUTRITION GUIDE</p>
+                <h2>Balanced Nutrition</h2>
+            </div>
+
+            <span class="card-icon">🥗</span>
+
+        </div>
+
+
+        <p id="nutritionSummary" class="nutrition-summary"></p>
+
+        <div id="nutritionGrid" class="nutrition-grid">
+
+            <div class="nutrition-card">
+                <span>🍳</span>
+                <h3>Breakfast</h3>
+                <p>
+                    Include whole grains, fruit and a protein-rich food.
+                </p>
+            </div>
+
+
+            <div class="nutrition-card">
+                <span>🍚</span>
+                <h3>Lunch</h3>
+                <p>
+                    Combine grains, vegetables and a protein source.
+                </p>
+            </div>
+
+
+            <div class="nutrition-card">
+                <span>🍎</span>
+                <h3>Snack</h3>
+                <p>
+                    Choose fruit, yogurt, nuts or another balanced snack.
+                </p>
+            </div>
+
+
+            <div class="nutrition-card">
+                <span>🥘</span>
+                <h3>Dinner</h3>
+                <p>
+                    Aim for vegetables, grains and a protein source.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- HABITS -->
+    <div class="habit-grid">
+
+        <div class="habit-card">
+
+            <span>💧</span>
+
+            <h3>Stay Hydrated</h3>
+
+            <p>
+                Drink water regularly throughout the day,
+                especially around exercise.
+            </p>
+
+        </div>
+
+
+        <div class="habit-card">
+
+            <span>😴</span>
+
+            <h3>Recover Well</h3>
+
+            <p>
+                Give your body enough rest between challenging workouts.
+            </p>
+
+        </div>
+
+
+        <div class="habit-card">
+
+            <span>🥦</span>
+
+            <h3>Eat Balanced Meals</h3>
+
+            <p>
+                Include a variety of vegetables, fruits,
+                grains and protein foods.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="disclaimer">
+
+        <strong>Important:</strong>
+
+        This website provides general fitness and nutrition
+        information for educational purposes. Individual exercise
+        and nutrition needs can vary. Consult a qualified
+        professional for personalized guidance.
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="logo">
+        <span>FIT</span>GUIDE
+    </div>
+
+    <p>
+        Your fitness journey starts with one step.
+    </p>
+
+    <p class="copyright">
+        © 2026 FitGuide | College Project
+    </p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
